@@ -1,0 +1,105 @@
+:root {
+    --cafe: #3D2B1F;
+    --dorado: #C0A080;
+    --verde: #2D5A27;
+    --crema: #FDF8F3;
+    --blanco: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: 'Poppins', sans-serif; color: #333; line-height: 1.6; }
+
+header {
+    background: var(--blanco);
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: bold; color: var(--cafe); }
+.nav-links { display: flex; list-style: none; }
+.nav-links a { text-decoration: none; color: var(--cafe); margin-left: 20px; font-weight: 600; }
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+}
+
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 20px; }
+
+.btn {
+    display: inline-block;
+    background: var(--dorado);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+section { padding: 80px 10%; text-align: center; }
+
+.storytelling { background: var(--crema); }
+.storytelling p { max-width: 800px; margin: 20px auto; text-align: justify; }
+
+/* AJUSTES EN LA GRILLA Y CARDS */
+.product-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px; 
+    margin-top: 40px; 
+}
+
+.card { 
+    padding: 20px; 
+    border: 1px solid #eee; 
+    border-radius: 15px; 
+    background: white; 
+    transition: 0.3s; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+/* NUEVA CLASE PARA IMÁGENES DE DISTINTOS TAMAÑOS */
+.card-img {
+    width: 100%;
+    height: 220px; /* Altura fija para que todas las cards sean iguales */
+    border-radius: 10px;
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarse */
+    object-position: center;
+    margin-bottom: 15px;
+}
+
+.card h3 { color: var(--cafe); margin-bottom: 5px; font-size: 1.1rem; }
+.card .precio { font-weight: bold; color: var(--dorado); margin: 10px 0; font-size: 1.2rem; }
+
+/* LO DEMÁS SE MANTIENE IGUAL */
+.puntos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px; }
+.punto-card { background: #f9f9f9; padding: 25px; border-radius: 12px; border-left: 5px solid var(--dorado); text-align: left; }
+.punto-card.tienda { background: #eef5ee; border-left: 5px solid var(--verde); }
+.tag { background: var(--verde); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; }
+
+.map-container { border-radius: 15px; overflow: hidden; border: 4px solid var(--crema); }
+
+footer { background: #1a1a1a; color: white; padding: 40px 10%; text-align: center; }
+.footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+.copy { margin-top: 30px; font-size: 0.8rem; opacity: 0.5; }
