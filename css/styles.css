@@ -103,3 +103,47 @@ section { padding: 80px 10%; text-align: center; }
 footer { background: #1a1a1a; color: white; padding: 40px 10%; text-align: center; }
 .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
 .copy { margin-top: 30px; font-size: 0.8rem; opacity: 0.5; }
+
+/* BOTÓN FLOTANTE DE WHATSAPP */
+.whatsapp-btn-fixed {
+    position: fixed;        /* Esto hace que flote y no se mueva al hacer scroll */
+    bottom: 30px;           /* Distancia desde abajo */
+    right: 30px;            /* Distancia desde la derecha */
+    width: 60px;            /* Ancho fijo del botón */
+    height: 60px;           /* Alto fijo del botón */
+    background-color: #25d366;
+    border-radius: 50%;     /* Lo hace circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;          /* Lo pone por encima de TODO */
+    transition: transform 0.3s ease;
+}
+
+/* Tamaño de la imagen dentro del círculo */
+.whatsapp-btn-fixed img {
+    width: 35px;            /* Tamaño del logo */
+    height: 35px;
+    display: block;         /* Evita espacios extraños */
+}
+
+/* Efecto al pasar el mouse */
+.whatsapp-btn-fixed:hover {
+    transform: scale(1.1);  /* Crece un poquito */
+    background-color: #20ba5a;
+}
+
+/* Ajuste para celulares (un poco más pequeño) */
+@media (max-width: 768px) {
+    .whatsapp-btn-fixed {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    .whatsapp-btn-fixed img {
+        width: 30px;
+        height: 30px;
+    }
+}
