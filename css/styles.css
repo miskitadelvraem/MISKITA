@@ -104,7 +104,7 @@ footer { background: #1a1a1a; color: white; padding: 40px 10%; text-align: cente
 .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
 .copy { margin-top: 30px; font-size: 0.8rem; opacity: 0.5; }
 
-/* BOTÓN FLOTANTE DE WHATSAPP */
+/* BOTÓN FLOTANTE DE WHATSAPP  */
 .whatsapp-btn-fixed {
     position: fixed;        /* Esto hace que flote y no se mueva al hacer scroll */
     bottom: 30px;           /* Distancia desde abajo */
